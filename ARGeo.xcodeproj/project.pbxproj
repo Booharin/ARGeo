@@ -7,13 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F34566B20C72D2F00FD6E7B /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F34566A20C72D2F00FD6E7B /* DebugMapViewController.xib */; };
+		1F34567120C72D5C00FD6E7B /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34566C20C72D5C00FD6E7B /* ARAnnotation.swift */; };
+		1F34567220C72D5C00FD6E7B /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34566D20C72D5C00FD6E7B /* ARTrackingManager.swift */; };
+		1F34567320C72D5C00FD6E7B /* ARViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34566E20C72D5C00FD6E7B /* ARViewController.swift */; };
+		1F34567420C72D5C00FD6E7B /* ARAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34566F20C72D5C00FD6E7B /* ARAnnotationView.swift */; };
+		1F34567520C72D5C00FD6E7B /* ARConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34567020C72D5C00FD6E7B /* ARConfiguration.swift */; };
+		1F34567720C72DCD00FD6E7B /* DebugMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34567620C72DCD00FD6E7B /* DebugMapViewController.swift */; };
 		1FC3E2D120C7213E00AC1AAF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E2D020C7213E00AC1AAF /* AppDelegate.swift */; };
-		1FC3E2D320C7213E00AC1AAF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E2D220C7213E00AC1AAF /* ViewController.swift */; };
+		1FC3E2D320C7213E00AC1AAF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E2D220C7213E00AC1AAF /* MainViewController.swift */; };
 		1FC3E2D620C7213E00AC1AAF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3E2D420C7213E00AC1AAF /* Main.storyboard */; };
 		1FC3E2D820C7213F00AC1AAF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3E2D720C7213F00AC1AAF /* Assets.xcassets */; };
 		1FC3E2DB20C7213F00AC1AAF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FC3E2D920C7213F00AC1AAF /* LaunchScreen.storyboard */; };
 		1FC3E2E620C7213F00AC1AAF /* ARGeoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E2E520C7213F00AC1AAF /* ARGeoTests.swift */; };
 		1FC3E2F120C7213F00AC1AAF /* ARGeoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E2F020C7213F00AC1AAF /* ARGeoUITests.swift */; };
+		1FC3E30020C725FE00AC1AAF /* PlaceLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E2FF20C725FE00AC1AAF /* PlaceLoader.swift */; };
+		1FC3E30520C726A400AC1AAF /* ARGeoConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E30420C726A400AC1AAF /* ARGeoConfig.swift */; };
+		1FC3E30820C728E400AC1AAF /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC3E30720C728E400AC1AAF /* Place.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,9 +44,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F34566A20C72D2F00FD6E7B /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
+		1F34566C20C72D5C00FD6E7B /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
+		1F34566D20C72D5C00FD6E7B /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
+		1F34566E20C72D5C00FD6E7B /* ARViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARViewController.swift; sourceTree = "<group>"; };
+		1F34566F20C72D5C00FD6E7B /* ARAnnotationView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotationView.swift; sourceTree = "<group>"; };
+		1F34567020C72D5C00FD6E7B /* ARConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARConfiguration.swift; sourceTree = "<group>"; };
+		1F34567620C72DCD00FD6E7B /* DebugMapViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DebugMapViewController.swift; sourceTree = "<group>"; };
 		1FC3E2CD20C7213E00AC1AAF /* ARGeo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ARGeo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC3E2D020C7213E00AC1AAF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1FC3E2D220C7213E00AC1AAF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1FC3E2D220C7213E00AC1AAF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		1FC3E2D520C7213E00AC1AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1FC3E2D720C7213F00AC1AAF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1FC3E2DA20C7213F00AC1AAF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +64,9 @@
 		1FC3E2EC20C7213F00AC1AAF /* ARGeoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ARGeoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FC3E2F020C7213F00AC1AAF /* ARGeoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGeoUITests.swift; sourceTree = "<group>"; };
 		1FC3E2F220C7213F00AC1AAF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC3E2FF20C725FE00AC1AAF /* PlaceLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceLoader.swift; sourceTree = "<group>"; };
+		1FC3E30420C726A400AC1AAF /* ARGeoConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ARGeoConfig.swift; sourceTree = "<group>"; };
+		1FC3E30720C728E400AC1AAF /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +94,44 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1F34566620C72CD000FD6E7B /* AR */ = {
+			isa = PBXGroup;
+			children = (
+				1F34566720C72CDC00FD6E7B /* Classes */,
+				1F34566820C72CF500FD6E7B /* Resources */,
+			);
+			path = AR;
+			sourceTree = "<group>";
+		};
+		1F34566720C72CDC00FD6E7B /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1F34566C20C72D5C00FD6E7B /* ARAnnotation.swift */,
+				1F34566F20C72D5C00FD6E7B /* ARAnnotationView.swift */,
+				1F34567020C72D5C00FD6E7B /* ARConfiguration.swift */,
+				1F34566D20C72D5C00FD6E7B /* ARTrackingManager.swift */,
+				1F34566E20C72D5C00FD6E7B /* ARViewController.swift */,
+				1F34566920C72D0600FD6E7B /* Debug */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1F34566820C72CF500FD6E7B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1F34566A20C72D2F00FD6E7B /* DebugMapViewController.xib */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		1F34566920C72D0600FD6E7B /* Debug */ = {
+			isa = PBXGroup;
+			children = (
+				1F34567620C72DCD00FD6E7B /* DebugMapViewController.swift */,
+			);
+			path = Debug;
+			sourceTree = "<group>";
+		};
 		1FC3E2C420C7213E00AC1AAF = {
 			isa = PBXGroup;
 			children = (
@@ -97,11 +155,11 @@
 		1FC3E2CF20C7213E00AC1AAF /* ARGeo */ = {
 			isa = PBXGroup;
 			children = (
-				1FC3E2D020C7213E00AC1AAF /* AppDelegate.swift */,
-				1FC3E2D220C7213E00AC1AAF /* ViewController.swift */,
-				1FC3E2D420C7213E00AC1AAF /* Main.storyboard */,
-				1FC3E2D720C7213F00AC1AAF /* Assets.xcassets */,
-				1FC3E2D920C7213F00AC1AAF /* LaunchScreen.storyboard */,
+				1F34566620C72CD000FD6E7B /* AR */,
+				1FC3E30620C728BB00AC1AAF /* Entities */,
+				1FC3E30220C7262800AC1AAF /* Flows */,
+				1FC3E30120C7260A00AC1AAF /* Support */,
+				1FC3E2FE20C725E200AC1AAF /* Services */,
 				1FC3E2DC20C7213F00AC1AAF /* Info.plist */,
 			);
 			path = ARGeo;
@@ -123,6 +181,50 @@
 				1FC3E2F220C7213F00AC1AAF /* Info.plist */,
 			);
 			path = ARGeoUITests;
+			sourceTree = "<group>";
+		};
+		1FC3E2FE20C725E200AC1AAF /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				1FC3E2FF20C725FE00AC1AAF /* PlaceLoader.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		1FC3E30120C7260A00AC1AAF /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				1FC3E2D720C7213F00AC1AAF /* Assets.xcassets */,
+				1FC3E2D020C7213E00AC1AAF /* AppDelegate.swift */,
+				1FC3E2D920C7213F00AC1AAF /* LaunchScreen.storyboard */,
+				1FC3E30420C726A400AC1AAF /* ARGeoConfig.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		1FC3E30220C7262800AC1AAF /* Flows */ = {
+			isa = PBXGroup;
+			children = (
+				1FC3E30320C7263100AC1AAF /* Main */,
+			);
+			path = Flows;
+			sourceTree = "<group>";
+		};
+		1FC3E30320C7263100AC1AAF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				1FC3E2D420C7213E00AC1AAF /* Main.storyboard */,
+				1FC3E2D220C7213E00AC1AAF /* MainViewController.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		1FC3E30620C728BB00AC1AAF /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				1FC3E30720C728E400AC1AAF /* Place.swift */,
+			);
+			path = Entities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +334,7 @@
 				1FC3E2DB20C7213F00AC1AAF /* LaunchScreen.storyboard in Resources */,
 				1FC3E2D820C7213F00AC1AAF /* Assets.xcassets in Resources */,
 				1FC3E2D620C7213E00AC1AAF /* Main.storyboard in Resources */,
+				1F34566B20C72D2F00FD6E7B /* DebugMapViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,8 +359,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1FC3E2D320C7213E00AC1AAF /* ViewController.swift in Sources */,
+				1F34567720C72DCD00FD6E7B /* DebugMapViewController.swift in Sources */,
+				1FC3E30520C726A400AC1AAF /* ARGeoConfig.swift in Sources */,
+				1F34567420C72D5C00FD6E7B /* ARAnnotationView.swift in Sources */,
+				1F34567120C72D5C00FD6E7B /* ARAnnotation.swift in Sources */,
+				1F34567520C72D5C00FD6E7B /* ARConfiguration.swift in Sources */,
+				1FC3E2D320C7213E00AC1AAF /* MainViewController.swift in Sources */,
+				1F34567320C72D5C00FD6E7B /* ARViewController.swift in Sources */,
 				1FC3E2D120C7213E00AC1AAF /* AppDelegate.swift in Sources */,
+				1F34567220C72D5C00FD6E7B /* ARTrackingManager.swift in Sources */,
+				1FC3E30020C725FE00AC1AAF /* PlaceLoader.swift in Sources */,
+				1FC3E30820C728E400AC1AAF /* Place.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
