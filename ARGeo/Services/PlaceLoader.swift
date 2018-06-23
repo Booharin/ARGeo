@@ -27,7 +27,7 @@ struct PlacesLoader {
                 print(error)
             } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    print(data!)
+                    //print(data!)
                     
                     do {
                         let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)
@@ -58,7 +58,7 @@ struct PlacesLoader {
                 print(error)
             } else if let httpResponse = response as? HTTPURLResponse {
                 if httpResponse.statusCode == 200 {
-                    print(data!)
+                    //print(data!)
                     
                     do {
                         let responseObject = try JSONSerialization.jsonObject(with: data!, options: .allowFragments)

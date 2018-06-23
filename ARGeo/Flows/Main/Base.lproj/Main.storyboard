@@ -41,6 +41,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="arButton" destination="tDr-eT-lFx" id="GW7-G3-kvl"/>
                         <outlet property="mapView" destination="ECW-7O-ZJK" id="3QE-I7-N5M"/>
                     </connections>
                 </viewController>

@@ -13,14 +13,25 @@ class MainViewController: UIViewController {
     fileprivate let locationManager = CLLocationManager()
     fileprivate var startedLoadingPOIs = false
     fileprivate var places = [Place]()
+    fileprivate var arViewController: ARViewController!
+    
+    @IBOutlet weak var arButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         settingLocationManager()
+        arButton.setTitle("AR", for: .normal)
     }
     
     @IBAction func showAR(_ sender: Any) {
+        arViewController = ARViewController()
+        arViewController.dataSource = self
+        arViewController.maxVisibleAnnotations = 30
+        arViewController.headingSmoothingFactor = 0.05
+        arViewController.setAnnotations(places)
+        
+        self.present(arViewController, animated: true, completion: nil)
     }
     
     func settingLocationManager() {
@@ -33,6 +44,37 @@ class MainViewController: UIViewController {
     }
 }
 
+extension MainViewController: ARDataSource {
+    func ar(_ arViewController: ARViewController, viewForAnnotation: ARAnnotation) -> ARAnnotationView {
+        let annotationView = AnnotationView()
+        annotationView.annotation = viewForAnnotation
+        annotationView.delegate = self
+        annotationView.frame = CGRect(x: 0, y: 0, width: 150, height: 50)
+        
+        return annotationView
+    }
+}
+
+extension MainViewController: AnnotationViewDelegate {
+    func didTouch(annotationView: AnnotationView) {
+        if let annotation = annotationView.annotation as? Place {
+            let placesLoader = PlacesLoader()
+            placesLoader.loadDetailInformation(forPlace: annotation) { resultDict, error in
+                if let infoDict = resultDict?.object(forKey: "result") as? NSDictionary {
+                    annotation.phoneNumber = infoDict.object(forKey: "formatted_phone_number") as? String
+                    annotation.website = infoDict.object(forKey: "website") as? String
+                    self.showInfoView(forPlace: annotation)
+                }
+            }
+        }
+    }
+    func showInfoView(forPlace place: Place) {
+        let alert = UIAlertController(title: place.placeName , message: place.infoText, preferredStyle: UIAlertControllerStyle.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+        arViewController.present(alert, animated: true, completion: nil)
+    }
+}
+
 extension MainViewController: CLLocationManagerDelegate {
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         if locations.count > 0 {
@@ -41,9 +83,6 @@ extension MainViewController: CLLocationManagerDelegate {
             
             if location.horizontalAccuracy < 100 {
                 manager.stopUpdatingLocation()
-//                let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
-//                let region = MKCoordinateRegion(center: location.coordinate, span: span)
-//                mapView.region = region
                 
                 let currentRadius: CLLocationDistance = 1000
                 let currentRegion = MKCoordinateRegionMakeWithDistance((location.coordinate),
@@ -56,7 +95,7 @@ extension MainViewController: CLLocationManagerDelegate {
 
                     let loader = PlacesLoader()
                     loader.loadPOIS(location: location, radius: 1000) { placesDict, error in
-                        print(placesDict)
+                        //print(placesDict)
                         if let dict = placesDict {
                             guard let placesArray = dict.object(forKey: "results") as?
                                 [NSDictionary]  else { return }

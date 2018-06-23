@@ -8,6 +8,6 @@
 
 struct ARGeoConfig {
     struct googleMaps {
-        static let apiKey = "AIzaSyDO44f25O_b8N7Em6pKAQni4opiyCB5wJk"
+        static let apiKey = "AIzaSyCVC7fNsfsffwPGdbSoIAnQyBNhmtZaBTs"
     }
 }
