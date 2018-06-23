@@ -28,6 +28,8 @@ class MainViewController: UIViewController {
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         locationManager.startUpdatingLocation()
         locationManager.requestWhenInUseAuthorization()
+        
+        mapView.showsUserLocation = true
     }
 }
 
@@ -39,18 +41,51 @@ extension MainViewController: CLLocationManagerDelegate {
             
             if location.horizontalAccuracy < 100 {
                 manager.stopUpdatingLocation()
-                let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
-                let region = MKCoordinateRegion(center: location.coordinate, span: span)
-                mapView.region = region
+//                let span = MKCoordinateSpan(latitudeDelta: 0.014, longitudeDelta: 0.014)
+//                let region = MKCoordinateRegion(center: location.coordinate, span: span)
+//                mapView.region = region
+                
+                let currentRadius: CLLocationDistance = 1000
+                let currentRegion = MKCoordinateRegionMakeWithDistance((location.coordinate),
+                                                                       currentRadius * 2.0,
+                                                                       currentRadius * 2.0)
+                mapView.setRegion(currentRegion, animated: true)
                 
                 if !startedLoadingPOIs {
                     startedLoadingPOIs = true
 
                     let loader = PlacesLoader()
                     loader.loadPOIS(location: location, radius: 1000) { placesDict, error in
-
+                        print(placesDict)
                         if let dict = placesDict {
-                            print(dict)
+                            guard let placesArray = dict.object(forKey: "results") as?
+                                [NSDictionary]  else { return }
+                            
+                            for placeDict in placesArray {
+                                let latitude = placeDict
+                                    .value(forKeyPath: "geometry.location.lat") as! CLLocationDegrees
+                                let longitude = placeDict
+                                    .value(forKeyPath: "geometry.location.lng") as! CLLocationDegrees
+                                
+                                let reference = placeDict
+                                    .object(forKey: "reference") as! String
+                                let name = placeDict.object(forKey: "name") as! String
+                                let address = placeDict.object(forKey: "vicinity") as! String
+                                let location = CLLocation(latitude: latitude,
+                                                         longitude: longitude)
+                                
+                                let place = Place(location: location,
+                                                 reference: reference,
+                                                      name: name,
+                                                   address: address)
+                                
+                                self.places.append(place)
+                                let annotation = PlaceAnnotation(location: place.location!.coordinate,
+                                                                    title: place.placeName)
+                                DispatchQueue.main.async {
+                                    self.mapView.addAnnotation(annotation)
+                                }
+                            }
                         }
                     }
                 }

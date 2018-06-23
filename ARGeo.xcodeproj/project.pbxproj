@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F24880B20DE4111005A2C53 /* PlaceAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F24880A20DE4111005A2C53 /* PlaceAnnotation.swift */; };
 		1F34566B20C72D2F00FD6E7B /* DebugMapViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F34566A20C72D2F00FD6E7B /* DebugMapViewController.xib */; };
 		1F34567120C72D5C00FD6E7B /* ARAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34566C20C72D5C00FD6E7B /* ARAnnotation.swift */; };
 		1F34567220C72D5C00FD6E7B /* ARTrackingManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F34566D20C72D5C00FD6E7B /* ARTrackingManager.swift */; };
@@ -44,6 +45,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F24880A20DE4111005A2C53 /* PlaceAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceAnnotation.swift; sourceTree = "<group>"; };
 		1F34566A20C72D2F00FD6E7B /* DebugMapViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DebugMapViewController.xib; sourceTree = "<group>"; };
 		1F34566C20C72D5C00FD6E7B /* ARAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARAnnotation.swift; sourceTree = "<group>"; };
 		1F34566D20C72D5C00FD6E7B /* ARTrackingManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ARTrackingManager.swift; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 			isa = PBXGroup;
 			children = (
 				1FC3E30720C728E400AC1AAF /* Place.swift */,
+				1F24880A20DE4111005A2C53 /* PlaceAnnotation.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -363,6 +366,7 @@
 				1FC3E30520C726A400AC1AAF /* ARGeoConfig.swift in Sources */,
 				1F34567420C72D5C00FD6E7B /* ARAnnotationView.swift in Sources */,
 				1F34567120C72D5C00FD6E7B /* ARAnnotation.swift in Sources */,
+				1F24880B20DE4111005A2C53 /* PlaceAnnotation.swift in Sources */,
 				1F34567520C72D5C00FD6E7B /* ARConfiguration.swift in Sources */,
 				1FC3E2D320C7213E00AC1AAF /* MainViewController.swift in Sources */,
 				1F34567320C72D5C00FD6E7B /* ARViewController.swift in Sources */,
